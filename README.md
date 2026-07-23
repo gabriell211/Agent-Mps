@@ -1,4 +1,4 @@
-# Santa Agent
+# C++ Agent
 
 Agente proprietário de inventário e monitoramento de impressoras para
 equipamentos administrados pela Santa Print.
