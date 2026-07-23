@@ -1,0 +1,13 @@
+{
+  "name": "santa-agent",
+  "version-string": "1.0.0",
+  "dependencies": [
+    "nlohmann-json",
+    "spdlog",
+    "sqlite3",
+    "openssl",
+    "curl",
+    "catch2",
+    "cpp-httplib"
+  ]
+}

@@ -1,0 +1,61 @@
+[agent]
+name = "santa-agent"
+collection_interval = 300
+discovery_interval = 3600
+thread_pool_size = 8
+log_level = "info"
+log_file = "C:/ProgramData/SantaPrint/santa-agent/santa-agent.log"
+
+[snmp]
+# Prefer SNMPv3 whenever the printer supports it. Never use "public" in a
+# production network without an explicit approval and network isolation.
+version = "3"
+port = 161
+timeout = 3
+retries = 2
+sec_name = "santa-agent"
+auth_proto = "SHA"
+auth_pass = "ALTERE_PARA_UM_SEGREDO_FORTE"
+priv_proto = "AES"
+priv_pass = "ALTERE_PARA_UM_SEGREDO_FORTE"
+
+[discovery]
+ip_ranges = ["192.168.1.0/24"]
+ports = [161, 631, 9100, 80, 443]
+mdns = true
+arp = true
+usb = true
+threads = 64
+timeout_ms = 1200
+
+[database]
+path = "C:/ProgramData/SantaPrint/santa-agent/agent.db"
+
+[api]
+# Bind locally and publish it only through a protected reverse proxy or VPN.
+host = "127.0.0.1"
+port = 8080
+token = "GERE_UM_TOKEN_ALEATORIO_DE_PELO_MENOS_32_CARACTERES"
+
+[alerts]
+toner_warning = 20
+toner_critical = 5
+offline_minutes = 5
+
+[notifications.webhook]
+enabled = false
+url = "https://example.invalid/santa-agent-webhook"
+
+[notifications.smtp]
+enabled = false
+host = "smtp.example.com"
+port = 587
+from = "monitoramento@example.com"
+to = ["suporte@example.com"]
+user = "monitoramento@example.com"
+pass = "ARMAZENE_EM_COFR_DE_SEGREDOS"
+
+[notifications.syslog]
+enabled = false
+host = "127.0.0.1"
+port = 5514
