@@ -1,7 +1,7 @@
 # C++ Agent
 
 Agente proprietário de inventário e monitoramento de impressoras para
-equipamentos administrados pela Santa Print.
+equipamentos administrados pelas Empresas de Outsource.
 
 Copyright (c) 2026 Gabriel Barcelos. Consulte [LICENSE](LICENSE).
 
