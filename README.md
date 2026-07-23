@@ -40,4 +40,4 @@ fabricantes.
 - Mantenha a API em `127.0.0.1` ou atrás de VPN/reverse proxy autenticado.
 - Autorize somente as faixas de rede dos clientes e use firewall local.
 - Teste cada modelo, firmware e consumível antes de considerá-lo homologado.
-- 
+- Lembre-se que este projeto é um protótico 
